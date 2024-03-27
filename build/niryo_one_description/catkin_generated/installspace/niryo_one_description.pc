@@ -1,0 +1,8 @@
+prefix=/home/admin2/ros-tcp-unity/install
+
+Name: niryo_one_description
+Description: Description of niryo_one_description
+Version: 2.3.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

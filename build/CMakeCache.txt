@@ -400,6 +400,12 @@ catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
+//Value Computed by CMake
+dingo_description_BINARY_DIR:STATIC=/home/admin2/ros-tcp-unity/build/dingo_description
+
+//Value Computed by CMake
+dingo_description_SOURCE_DIR:STATIC=/home/admin2/ros-tcp-unity/src/dingo_description
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/noetic/share/gencpp/cmake
 
@@ -477,6 +483,12 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 
 //Value Computed by CMake
+niryo_one_description_BINARY_DIR:STATIC=/home/admin2/ros-tcp-unity/build/niryo_one_description
+
+//Value Computed by CMake
+niryo_one_description_SOURCE_DIR:STATIC=/home/admin2/ros-tcp-unity/src/niryo_one_description
+
+//Value Computed by CMake
 ros_tcp_endpoint_BINARY_DIR:STATIC=/home/admin2/ros-tcp-unity/build/ROS-TCP-Endpoint
 
 //The directory containing a CMake configuration file for ros_tcp_endpoint.
@@ -490,6 +502,9 @@ roscpp_serialization_DIR:PATH=/opt/ros/noetic/share/roscpp_serialization/cmake
 
 //The directory containing a CMake configuration file for roscpp_traits.
 roscpp_traits_DIR:PATH=/opt/ros/noetic/share/roscpp_traits/cmake
+
+//The directory containing a CMake configuration file for roslaunch.
+roslaunch_DIR:PATH=/opt/ros/noetic/share/roslaunch/cmake
 
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
@@ -660,7 +675,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
