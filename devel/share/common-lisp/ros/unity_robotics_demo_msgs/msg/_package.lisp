@@ -5,5 +5,7 @@
    "POSROT"
    "<UNITYCOLOR>"
    "UNITYCOLOR"
+   "<VELOCITY>"
+   "VELOCITY"
   ))
 

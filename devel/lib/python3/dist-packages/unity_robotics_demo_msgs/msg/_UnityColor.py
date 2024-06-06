@@ -15,7 +15,7 @@ class UnityColor(genpy.Message):
 int32 g
 int32 b
 int32 a
-"""
+ """
   __slots__ = ['r','g','b','a']
   _slot_types = ['int32','int32','int32','int32']
 

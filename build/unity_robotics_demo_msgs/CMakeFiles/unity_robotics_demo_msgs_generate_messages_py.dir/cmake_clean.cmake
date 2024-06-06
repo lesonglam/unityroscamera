@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "/home/admin2/ros-tcp-unity/devel/lib/python3/dist-packages/unity_robotics_demo_msgs/msg/_PosRot.py"
   "/home/admin2/ros-tcp-unity/devel/lib/python3/dist-packages/unity_robotics_demo_msgs/msg/_UnityColor.py"
+  "/home/admin2/ros-tcp-unity/devel/lib/python3/dist-packages/unity_robotics_demo_msgs/msg/_Velocity.py"
   "/home/admin2/ros-tcp-unity/devel/lib/python3/dist-packages/unity_robotics_demo_msgs/msg/__init__.py"
   "/home/admin2/ros-tcp-unity/devel/lib/python3/dist-packages/unity_robotics_demo_msgs/srv/_ObjectPoseService.py"
   "/home/admin2/ros-tcp-unity/devel/lib/python3/dist-packages/unity_robotics_demo_msgs/srv/_PositionService.py"

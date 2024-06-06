@@ -55,6 +55,7 @@ include unity_robotics_demo_msgs/CMakeFiles/unity_robotics_demo_msgs_generate_me
 
 unity_robotics_demo_msgs/CMakeFiles/unity_robotics_demo_msgs_generate_messages_eus: /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/msg/PosRot.l
 unity_robotics_demo_msgs/CMakeFiles/unity_robotics_demo_msgs_generate_messages_eus: /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/msg/UnityColor.l
+unity_robotics_demo_msgs/CMakeFiles/unity_robotics_demo_msgs_generate_messages_eus: /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/msg/Velocity.l
 unity_robotics_demo_msgs/CMakeFiles/unity_robotics_demo_msgs_generate_messages_eus: /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/ObjectPoseService.l
 unity_robotics_demo_msgs/CMakeFiles/unity_robotics_demo_msgs_generate_messages_eus: /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/PositionService.l
 unity_robotics_demo_msgs/CMakeFiles/unity_robotics_demo_msgs_generate_messages_eus: /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/manifest.l
@@ -70,27 +71,33 @@ unity_robotics_demo_msgs/CMakeFiles/unity_robotics_demo_msgs_generate_messages_e
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/admin2/ros-tcp-unity/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from unity_robotics_demo_msgs/UnityColor.msg"
 	cd /home/admin2/ros-tcp-unity/build/unity_robotics_demo_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/UnityColor.msg -Iunity_robotics_demo_msgs:/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p unity_robotics_demo_msgs -o /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/msg
 
+/home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/msg/Velocity.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/msg/Velocity.l: /home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/admin2/ros-tcp-unity/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from unity_robotics_demo_msgs/Velocity.msg"
+	cd /home/admin2/ros-tcp-unity/build/unity_robotics_demo_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg -Iunity_robotics_demo_msgs:/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p unity_robotics_demo_msgs -o /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/msg
+
 /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/ObjectPoseService.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/ObjectPoseService.l: /home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv
-/home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/ObjectPoseService.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/ObjectPoseService.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/ObjectPoseService.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/admin2/ros-tcp-unity/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from unity_robotics_demo_msgs/ObjectPoseService.srv"
+/home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/ObjectPoseService.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/admin2/ros-tcp-unity/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from unity_robotics_demo_msgs/ObjectPoseService.srv"
 	cd /home/admin2/ros-tcp-unity/build/unity_robotics_demo_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv -Iunity_robotics_demo_msgs:/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p unity_robotics_demo_msgs -o /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv
 
 /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/PositionService.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/PositionService.l: /home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/PositionService.srv
 /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/PositionService.l: /home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/PosRot.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/admin2/ros-tcp-unity/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from unity_robotics_demo_msgs/PositionService.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/admin2/ros-tcp-unity/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from unity_robotics_demo_msgs/PositionService.srv"
 	cd /home/admin2/ros-tcp-unity/build/unity_robotics_demo_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/PositionService.srv -Iunity_robotics_demo_msgs:/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p unity_robotics_demo_msgs -o /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv
 
 /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/admin2/ros-tcp-unity/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for unity_robotics_demo_msgs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/admin2/ros-tcp-unity/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp manifest code for unity_robotics_demo_msgs"
 	cd /home/admin2/ros-tcp-unity/build/unity_robotics_demo_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs unity_robotics_demo_msgs geometry_msgs std_msgs
 
 unity_robotics_demo_msgs_generate_messages_eus: unity_robotics_demo_msgs/CMakeFiles/unity_robotics_demo_msgs_generate_messages_eus
 unity_robotics_demo_msgs_generate_messages_eus: /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/msg/PosRot.l
 unity_robotics_demo_msgs_generate_messages_eus: /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/msg/UnityColor.l
+unity_robotics_demo_msgs_generate_messages_eus: /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/msg/Velocity.l
 unity_robotics_demo_msgs_generate_messages_eus: /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/ObjectPoseService.l
 unity_robotics_demo_msgs_generate_messages_eus: /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/srv/PositionService.l
 unity_robotics_demo_msgs_generate_messages_eus: /home/admin2/ros-tcp-unity/devel/share/roseus/ros/unity_robotics_demo_msgs/manifest.l

@@ -131,11 +131,9 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/admin2/ros-tcp-unity/build/gtest/cmake_install.cmake")
-  include("/home/admin2/ros-tcp-unity/build/niryo_one_description/cmake_install.cmake")
   include("/home/admin2/ros-tcp-unity/build/unity_robotics_demo_msgs/cmake_install.cmake")
   include("/home/admin2/ros-tcp-unity/build/ROS-TCP-Endpoint/cmake_install.cmake")
   include("/home/admin2/ros-tcp-unity/build/unity_robotics_demo/cmake_install.cmake")
-  include("/home/admin2/ros-tcp-unity/build/dingo_description/cmake_install.cmake")
 
 endif()
 

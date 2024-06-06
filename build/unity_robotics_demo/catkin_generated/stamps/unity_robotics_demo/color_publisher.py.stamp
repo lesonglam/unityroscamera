@@ -6,6 +6,7 @@ import rosgraph
 import time
 from unity_robotics_demo_msgs.msg import UnityColor
 
+from std_msgs.msg import String
 
 TOPIC_NAME = 'color'
 NODE_NAME = 'color_publisher'
@@ -24,6 +25,18 @@ def post_color():
     pub.publish(color)
 
     time.sleep(0.1)
+
+def post_postion(topicname, value2publish):
+    pub = rospy.Publisher(topicname, String, queue_size=10)
+    rospy.init_node(NODE_NAME, anonymous=True)
+
+    tmp = "helo from ROS1"
+
+    wait_for_connections(pub, topicname)
+    pub.publish(tmp)
+
+    time.sleep(0.1)
+
 
 
 def wait_for_connections(pub, topic):
@@ -44,5 +57,6 @@ def wait_for_connections(pub, topic):
 if __name__ == '__main__':
     try:
         post_color()
+        # post_postion("position","any")
     except rospy.ROSInterruptException:
         pass

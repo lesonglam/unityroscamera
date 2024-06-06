@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "unity_robotics_demo_msgs: 2 messages, 2 services")
+message(STATUS "unity_robotics_demo_msgs: 3 messages, 2 services")
 
 set(MSG_I_FLAGS "-Iunity_robotics_demo_msgs:/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -27,9 +27,14 @@ add_custom_target(_unity_robotics_demo_msgs_generate_messages_check_deps_${_file
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "unity_robotics_demo_msgs" "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/UnityColor.msg" ""
 )
 
+get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg" NAME_WE)
+add_custom_target(_unity_robotics_demo_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "unity_robotics_demo_msgs" "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg" ""
+)
+
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv" NAME_WE)
 add_custom_target(_unity_robotics_demo_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "unity_robotics_demo_msgs" "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv" "geometry_msgs/Quaternion:geometry_msgs/Point:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "unity_robotics_demo_msgs" "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv" "geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion"
 )
 
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/PositionService.srv" NAME_WE)
@@ -55,12 +60,18 @@ _generate_msg_cpp(unity_robotics_demo_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/unity_robotics_demo_msgs
 )
+_generate_msg_cpp(unity_robotics_demo_msgs
+  "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/unity_robotics_demo_msgs
+)
 
 ### Generating Services
 _generate_srv_cpp(unity_robotics_demo_msgs
   "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/unity_robotics_demo_msgs
 )
 _generate_srv_cpp(unity_robotics_demo_msgs
@@ -85,6 +96,8 @@ add_dependencies(unity_robotics_demo_msgs_generate_messages unity_robotics_demo_
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/PosRot.msg" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_cpp _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/UnityColor.msg" NAME_WE)
+add_dependencies(unity_robotics_demo_msgs_generate_messages_cpp _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_cpp _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_cpp _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
@@ -112,12 +125,18 @@ _generate_msg_eus(unity_robotics_demo_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/unity_robotics_demo_msgs
 )
+_generate_msg_eus(unity_robotics_demo_msgs
+  "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/unity_robotics_demo_msgs
+)
 
 ### Generating Services
 _generate_srv_eus(unity_robotics_demo_msgs
   "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/unity_robotics_demo_msgs
 )
 _generate_srv_eus(unity_robotics_demo_msgs
@@ -142,6 +161,8 @@ add_dependencies(unity_robotics_demo_msgs_generate_messages unity_robotics_demo_
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/PosRot.msg" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_eus _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/UnityColor.msg" NAME_WE)
+add_dependencies(unity_robotics_demo_msgs_generate_messages_eus _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_eus _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_eus _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
@@ -169,12 +190,18 @@ _generate_msg_lisp(unity_robotics_demo_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/unity_robotics_demo_msgs
 )
+_generate_msg_lisp(unity_robotics_demo_msgs
+  "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/unity_robotics_demo_msgs
+)
 
 ### Generating Services
 _generate_srv_lisp(unity_robotics_demo_msgs
   "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/unity_robotics_demo_msgs
 )
 _generate_srv_lisp(unity_robotics_demo_msgs
@@ -199,6 +226,8 @@ add_dependencies(unity_robotics_demo_msgs_generate_messages unity_robotics_demo_
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/PosRot.msg" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_lisp _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/UnityColor.msg" NAME_WE)
+add_dependencies(unity_robotics_demo_msgs_generate_messages_lisp _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_lisp _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_lisp _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
@@ -226,12 +255,18 @@ _generate_msg_nodejs(unity_robotics_demo_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/unity_robotics_demo_msgs
 )
+_generate_msg_nodejs(unity_robotics_demo_msgs
+  "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/unity_robotics_demo_msgs
+)
 
 ### Generating Services
 _generate_srv_nodejs(unity_robotics_demo_msgs
   "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/unity_robotics_demo_msgs
 )
 _generate_srv_nodejs(unity_robotics_demo_msgs
@@ -256,6 +291,8 @@ add_dependencies(unity_robotics_demo_msgs_generate_messages unity_robotics_demo_
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/PosRot.msg" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_nodejs _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/UnityColor.msg" NAME_WE)
+add_dependencies(unity_robotics_demo_msgs_generate_messages_nodejs _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_nodejs _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_nodejs _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
@@ -283,12 +320,18 @@ _generate_msg_py(unity_robotics_demo_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/unity_robotics_demo_msgs
 )
+_generate_msg_py(unity_robotics_demo_msgs
+  "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/unity_robotics_demo_msgs
+)
 
 ### Generating Services
 _generate_srv_py(unity_robotics_demo_msgs
   "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/unity_robotics_demo_msgs
 )
 _generate_srv_py(unity_robotics_demo_msgs
@@ -313,6 +356,8 @@ add_dependencies(unity_robotics_demo_msgs_generate_messages unity_robotics_demo_
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/PosRot.msg" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_py _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/UnityColor.msg" NAME_WE)
+add_dependencies(unity_robotics_demo_msgs_generate_messages_py _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_py _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv" NAME_WE)
 add_dependencies(unity_robotics_demo_msgs_generate_messages_py _unity_robotics_demo_msgs_generate_messages_check_deps_${_filename})

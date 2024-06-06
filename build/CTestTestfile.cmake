@@ -5,8 +5,6 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
-subdirs("niryo_one_description")
 subdirs("unity_robotics_demo_msgs")
 subdirs("ROS-TCP-Endpoint")
 subdirs("unity_robotics_demo")
-subdirs("dingo_description")

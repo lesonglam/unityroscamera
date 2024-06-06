@@ -8,4 +8,6 @@
     (:file "_package_PosRot" :depends-on ("_package"))
     (:file "UnityColor" :depends-on ("_package_UnityColor"))
     (:file "_package_UnityColor" :depends-on ("_package"))
+    (:file "Velocity" :depends-on ("_package_Velocity"))
+    (:file "_package_Velocity" :depends-on ("_package"))
   ))

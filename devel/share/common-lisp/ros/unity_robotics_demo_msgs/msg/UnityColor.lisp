@@ -125,10 +125,10 @@
   "deccfa94a2f280f4c4cea955620ed984")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<UnityColor>)))
   "Returns full string definition for message of type '<UnityColor>"
-  (cl:format cl:nil "int32 r~%int32 g~%int32 b~%int32 a~%~%~%"))
+  (cl:format cl:nil "int32 r~%int32 g~%int32 b~%int32 a~% ~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'UnityColor)))
   "Returns full string definition for message of type 'UnityColor"
-  (cl:format cl:nil "int32 r~%int32 g~%int32 b~%int32 a~%~%~%"))
+  (cl:format cl:nil "int32 r~%int32 g~%int32 b~%int32 a~% ~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <UnityColor>))
   (cl:+ 0
      4

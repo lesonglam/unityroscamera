@@ -5,6 +5,7 @@ import rospy
 import rosgraph
 import time
 from unity_robotics_demo_msgs.msg import UnityColor
+
 from std_msgs.msg import String
 
 TOPIC_NAME = 'color'
@@ -56,6 +57,6 @@ def wait_for_connections(pub, topic):
 if __name__ == '__main__':
     try:
         post_color()
-        post_postion("position")
+        # post_postion("position","any")
     except rospy.ROSInterruptException:
         pass

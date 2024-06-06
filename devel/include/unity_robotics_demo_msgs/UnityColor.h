@@ -168,6 +168,7 @@ struct Definition< ::unity_robotics_demo_msgs::UnityColor_<ContainerAllocator> >
 "int32 g\n"
 "int32 b\n"
 "int32 a\n"
+" \n"
 ;
   }
 

@@ -60,3 +60,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/unity_robotics_demo" TYPE PROGRAM FILES "/home/admin2/ros-tcp-unity/build/unity_robotics_demo/catkin_generated/installspace/color_publisher.py")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/unity_robotics_demo" TYPE PROGRAM FILES "/home/admin2/ros-tcp-unity/build/unity_robotics_demo/catkin_generated/installspace/velocity_publisher.py")
+endif()
+

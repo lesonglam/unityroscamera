@@ -16,6 +16,7 @@ catkin_package(CATKIN_DEPENDS
 catkin_install_python(PROGRAMS
   scripts/position_service.py
   scripts/color_publisher.py
+   scripts/velocity_publisher.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

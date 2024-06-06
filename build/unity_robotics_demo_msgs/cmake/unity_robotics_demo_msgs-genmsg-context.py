@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/PosRot.msg;/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/UnityColor.msg"
+messages_str = "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/PosRot.msg;/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/UnityColor.msg;/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/msg/Velocity.msg"
 services_str = "/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/ObjectPoseService.srv;/home/admin2/ros-tcp-unity/src/unity_robotics_demo_msgs/srv/PositionService.srv"
 pkg_name = "unity_robotics_demo_msgs"
 dependencies_str = "geometry_msgs;std_msgs"
