@@ -31,16 +31,22 @@ def read_data(path):
         print(f"An error occurred while reading the file: {e}")
         return None
  
-keep_running = True
-while keep_running:    
+def update_visualization():
+    global previous_t
     if time.time() - previous_t > dt: 
         loaded_arr  = read_data(filepath)
         if loaded_arr is not None:
             pcd.points = o3d.utility.Vector3dVector(loaded_arr*0.2)    #*.2 as zoom out    
             vis.update_geometry(pcd)
             print(loaded_arr.shape)       
-        previous_t = time.time()  
-    keep_running = vis.poll_events()
+        previous_t = time.time()   
+    vis.poll_events()
+    # keep_running = vis.poll_events()
     vis.update_renderer()
+    
+
+keep_running = True
+while keep_running:    
+    update_visualization()
 
 vis.destroy_window() 

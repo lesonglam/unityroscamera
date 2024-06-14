@@ -7,12 +7,42 @@ import sensor_msgs.point_cloud2 as pc2
 import numpy as np
 import time
 import socket
-previous_time = time.time() 
+import open3d as o3d
+
+previous_t = time.time() 
 
 # Global variable to store the latest LiDAR data
 lidar_data = None
-txt=""
-count = 0
+
+
+# create visualizer and window.
+vis = o3d.visualization.Visualizer()
+vis.create_window(height=720, width=1080)
+
+# initialize pointcloud instance.
+pcd = o3d.geometry.PointCloud()
+# *optionally* add initial points
+points = np.random.rand(10, 3)
+pcd.points = o3d.utility.Vector3dVector(points) 
+# include it in the visualizer before non-blocking visualization.
+vis.add_geometry(pcd) 
+# to add new points each dt secs.
+dt = 0.2
+
+def update_visualization(loaded_arr):
+    global previous_t
+    if time.time() - previous_t > dt: 
+        # loaded_arr  = read_data(filepath)
+        if loaded_arr is not None:
+            pcd.points = o3d.utility.Vector3dVector(loaded_arr*0.2)    #*.2 as zoom out    
+            vis.update_geometry(pcd)
+            # print(loaded_arr.shape)       
+        previous_t = time.time()  
+    vis.poll_events()
+    # keep_running = vis.poll_events()
+    vis.update_renderer()
+
+
 def pointcloud2_to_array(cloud_msg):
     # Helper function to convert PointCloud2 message to numpy array
     dtype_list = []
@@ -42,11 +72,13 @@ def send_data(lidar):
  
 def callback(msg):
     global lidar_data 
-    global previous_time 
+    global previous_t 
     lidar_data = pointcloud2_to_array(msg)[:,:3]  
-    if time.time() - previous_time > .2: 
-        send_data(lidar_data) 
-    previous_time = time.time() 
+    if time.time() - previous_t > .2: 
+        # send_data(lidar_data)  #create  text file
+        update_visualization(lidar_data)
+        # print(lidar_data)
+    previous_t = time.time() 
 def listener(): 
     rospy.init_node('lidar_listener', anonymous=True)
     rospy.Subscriber("/mid/points", PointCloud2, callback)
